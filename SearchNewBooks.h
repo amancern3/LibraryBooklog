@@ -13,18 +13,18 @@
 
 class book {
 private:
-    int ISNB;
+    std::string ISNB;
     std::string language ;
     std::string type ;
 
     // constructor, use 'new' each time a eol is reached.
 public:
     book () {
-        ISNB = 0 ;
+        ISNB = "" ;
         language = "" ;
         type = "" ;
     }
-    book (int no, std::string& lang, std::string &condition) {
+    book (std::string& no, std::string& lang, std::string &condition) {
         ISNB = no;
         language = lang ;
         type = condition ;
@@ -34,14 +34,16 @@ public:
 
     }
 
-    void new_obj (int no, std::string& lang, std::string &condition) {
-        book (no, lang, condition) ;
+    void  new_obj (std::string& no, std::string& lang, std::string &condition) {
+        ISNB = no;
+        language = lang ;
+        type = condition ;
     }
 
 };
 
 
-void vectorize_file (std::string filename , std::vector<book>& input) ;
+void vectorize_file (std::string const filename , std::vector<book>& input) ;
 void linear_search(std::vector<book>& newbooks, std::vector<book>& request);
 void binary_search(std::vector<book>& newbooks, std::vector<book>& request) ;
 #endif //P1_PHASE_SEARCHNEWBOOKS_H

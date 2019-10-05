@@ -14,18 +14,11 @@ void binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
 
 // https://stackoverflow.com/questions/3910326/c-read-file-line-by-line-then-split-each-line-using-the-delimiter
 
-void vectorize_file (std::string filename , std::vector<book> &input) {
+void vectorize_file (std::string const filename , std::vector<book> &input) {
 
     // variables to handle dat files.
+    std::ifstream fileIn ( filename );
 
-    std::string lang ;
-    std:: string cond ;
-    int isnb = 0  ;
-    book newObj ;
-
-
-    std::ifstream fileIn ( filename , std::ios::in | std::ios::out );
-    fileIn.open(filename) ;
 
     if (!fileIn.is_open()) {
         std::cerr << "File type error, cannot be opened\n" ;
@@ -33,21 +26,30 @@ void vectorize_file (std::string filename , std::vector<book> &input) {
     }
 
     std::string line ;
-    std::getline(fileIn, line);
-    std::istringstream linestream (line);
 
-   std::getline(linestream, isnb, " ")
+    while (fileIn.good()) {
+        std::string lang ;
+        std:: string cond ;
+        std::string isnb = 0  ;
 
-    fileIn >> isnb >> lang >> cond ;
-   std::cout << isnb <<lang << cond  ;
-
-
-
-    while (fileIn >> isnb >> lang >> cond ) {
-        newObj.new_obj(isnb, lang, cond) ;
-        input.push_back(newObj) ;
-
+        
     }
+ /*   while (std::getline(fileIn, line) ) {
+        std::string lang ;
+        std:: string cond ;
+        int isnb = 0  ;
+
+        std::stringstream linestream(line);
+
+        //std::getline(linestream, isnb, " ")
+
+
+
+        std::getline(linestream,lang, ',') ;
+        book newObj ;
+        newObj.new_obj(isnb, lang, cond) ;
+        input.push_back(newObj);
+    }*/
 
     fileIn.close();
 
@@ -73,6 +75,9 @@ int main(int argc, char* argv[]) {
     vectorize_file (argv[1], newbooks) ;
     vectorize_file (argv[2], request) ;
 
+    //-----------
+    //Searching algo
+    //------------
 std::cout << "Choice of search method ([l]inear, [b]inary)?" << std::endl;
     std::cin >> (choice );
 

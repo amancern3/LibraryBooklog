@@ -11,7 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c614189b-8ab5-4255-82fe-a73084f9fb24" name="Default Changelist" comment="" />
+    <list default="true" id="c614189b-8ab5-4255-82fe-a73084f9fb24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SearchNewBooks.h" beforeDir="false" afterPath="$PROJECT_DIR$/SearchNewBooks.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/p1_phase.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/p1_phase.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/p1_phase.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/p1_phase.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/p1_phase" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/p1_phase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newbooks.dat" beforeDir="false" afterPath="$PROJECT_DIR$/newbooks.dat" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +31,14 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1RitKaAqSxgt0AGVLluijSiiXL5" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -39,7 +53,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="p1_phase" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="newbooks.dat requests.dat" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p1_phase" TARGET_NAME="p1_phase" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p1_phase" RUN_TARGET_NAME="p1_phase">
+    <configuration name="p1_phase" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="newbooks.dat request.dat" WORKING_DIR="file://$PROJECT_DIR$/Program 1 Files" PASS_PARENT_ENVS_2="true" PROJECT_NAME="p1_phase" TARGET_NAME="p1_phase" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="p1_phase" RUN_TARGET_NAME="p1_phase">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -56,24 +70,44 @@
       <option name="presentableId" value="Default" />
       <updated>1570161680695</updated>
       <workItem from="1570161685196" duration="10415000" />
+      <workItem from="1570221979032" duration="1290000" />
+      <workItem from="1570226142178" duration="4305000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>70</line>
-          <option name="timeStamp" value="8" />
+          <line>80</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>27</line>
-          <option name="timeStamp" value="9" />
+          <line>35</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>29</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
