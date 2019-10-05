@@ -3,11 +3,21 @@
 
 // phase 1 -- reading in the dataSet
 
-void linear_search(std::vector<book>& newbooks, std::vector<book>& request){
+int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
+    int count = 0 ;
 
+    for (book i : request) {
+       // cout << i.isnb_no() << endl ;
+        for (book x : newbooks) {
+            if (i.isnb_no() == x.isnb_no())
+                count++ ;
+        }
+    }
+
+    cout << count << endl ;
 }
-void binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
-
+int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
+    std::sort()
 }
 
 // Generic function to read and vectorize each obj created line by line.
@@ -27,32 +37,31 @@ void vectorize_file (std::string const filename , std::vector<book> &input) {
 
     std::string line ;
 
-    while (fileIn.good()) {
-        std::string lang ;
-        std:: string cond ;
-        std::string isnb = 0  ;
 
-        
+    while (std::getline(fileIn, line) ) {
+        //std::cout << line << std::endl;
+
+        std::vector<std::string> result_v ;
+        result_v = split(line, ",") ;
+
+        book* newObj = new book (result_v[0], result_v[1], result_v[2]) ;
+        input.push_back(*newObj) ;
+
     }
- /*   while (std::getline(fileIn, line) ) {
-        std::string lang ;
-        std:: string cond ;
-        int isnb = 0  ;
-
-        std::stringstream linestream(line);
-
-        //std::getline(linestream, isnb, " ")
-
-
-
-        std::getline(linestream,lang, ',') ;
-        book newObj ;
-        newObj.new_obj(isnb, lang, cond) ;
-        input.push_back(newObj);
-    }*/
 
     fileIn.close();
+}
 
+std::vector<std::string> split(std::string str,std::string sep){
+    char* cstr=const_cast<char*>(str.c_str());
+    char* current;
+    std::vector<std::string> arr;
+    current=strtok(cstr,sep.c_str());
+    while(current!=NULL){
+        arr.push_back(current);
+        current=strtok(NULL,sep.c_str());
+    }
+    return arr;
 }
 
 int main(int argc, char* argv[]) {
@@ -61,7 +70,6 @@ int main(int argc, char* argv[]) {
     std::vector<book> request ;
     int loop = 1 ;
 
-    char choice ;
     if ( argc < 2 ) {
         std::cerr << "Invalid arguments" << std::endl;
         std::cerr << "Usage: newbooks.dat request.dat ./SearchNewBooks" << std::endl ;
@@ -78,10 +86,15 @@ int main(int argc, char* argv[]) {
     //-----------
     //Searching algo
     //------------
-std::cout << "Choice of search method ([l]inear, [b]inary)?" << std::endl;
-    std::cin >> (choice );
+
 
 while (loop ) {
+
+    char choice ;
+
+    std::cout << "Choice of search method ([l]inear, [b]inary)?" << std::endl;
+    std::cin >> (choice );
+
     if ( choice == 'l' || choice == 'L') {
         linear_search(newbooks, request);
     }
@@ -90,7 +103,6 @@ while (loop ) {
     }
     else {
         std::cerr << "Invalid choice, try again ! \n" ;
-        loop = 0 ;
     }
 
 } }

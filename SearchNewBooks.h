@@ -9,7 +9,11 @@
 #include <vector>
 #include <sstream>
 #include <stdio.h>
+#include <algorithm>
 #include <fstream>
+#include <string.h>
+
+using namespace std ;
 
 class book {
 private:
@@ -24,6 +28,11 @@ public:
         language = "" ;
         type = "" ;
     }
+
+    std::string isnb_no () {
+        return  ISNB ;
+    }
+
     book (std::string& no, std::string& lang, std::string &condition) {
         ISNB = no;
         language = lang ;
@@ -41,9 +50,10 @@ public:
     }
 
 };
+std::vector<std::string> split(std::string str,std::string sep) ;
 
 
 void vectorize_file (std::string const filename , std::vector<book>& input) ;
-void linear_search(std::vector<book>& newbooks, std::vector<book>& request);
-void binary_search(std::vector<book>& newbooks, std::vector<book>& request) ;
+int linear_search(std::vector<book>& newbooks, std::vector<book>& request);
+int binary_search(std::vector<book>& newbooks, std::vector<book>& request) ;
 #endif //P1_PHASE_SEARCHNEWBOOKS_H
