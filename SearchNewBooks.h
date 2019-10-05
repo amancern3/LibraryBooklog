@@ -21,6 +21,7 @@ private:
     std::string language ;
     std::string type ;
 
+
     // constructor, use 'new' each time a eol is reached.
 public:
     book () {
@@ -28,9 +29,27 @@ public:
         language = "" ;
         type = "" ;
     }
+    bool operator < (const book& obj) const {
+        if (ISNB < obj.ISNB) {
+            return (ISNB < obj.ISNB);
+        } else if (ISNB == obj.ISNB) {
+            return (language.compare(obj.language));
+        } else
+            return type.compare(obj.type);
+
+    }
+
 
     std::string isnb_no () {
         return  ISNB ;
+    }
+
+    std::string lang () {
+        return language;
+    }
+
+    std::string type_def () {
+        return type ;
     }
 
     book (std::string& no, std::string& lang, std::string &condition) {
@@ -52,7 +71,7 @@ public:
 };
 std::vector<std::string> split(std::string str,std::string sep) ;
 
-
+int bsearch(vector<book> vector, int i, int size, string basicString) ;
 void vectorize_file (std::string const filename , std::vector<book>& input) ;
 int linear_search(std::vector<book>& newbooks, std::vector<book>& request);
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) ;
