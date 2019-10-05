@@ -22,13 +22,13 @@ int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
     std::sort(newbooks.begin(), newbooks.end()) ;
 
-    int count;
+    int count = 0 ;
 
     for (book i : request) {
         cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        auto size = sizeof(newbooks)/ sizeof(newbooks[0]) ;
+        int size = newbooks.size() ;
 
-       count =  bsearch (newbooks, 0, size , i.isnb_no()) ;
+        count = bsearch (newbooks, 0, size , i.isnb_no()) ;
 
     }
 
@@ -41,7 +41,7 @@ int bsearch(vector<book> vector, int i, int size, string basicString) {
     if (size >= 1) {
         auto mid = 1 + (size - 1) / 2 ;
         if (vector[mid].isnb_no() == basicString) {
-            count++;
+            count++ ;
             return count ;
         }
 
@@ -50,6 +50,7 @@ int bsearch(vector<book> vector, int i, int size, string basicString) {
 
         return bsearch(vector, mid + 1, size, basicString);
     }
+    return 0 ;
 }
 
 // Generic function to read and vectorize each obj created line by line.
