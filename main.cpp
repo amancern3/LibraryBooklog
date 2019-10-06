@@ -3,7 +3,6 @@
 
 // phase 1 -- reading in the dataSet
 
-int bsearch(vector<book> vector, int i, int size, string basicString);
 
 int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
     int count = 0 ;
@@ -18,39 +17,42 @@ int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
 
     cout << count << endl ;
 
+  return count ;
 }
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
     std::sort(newbooks.begin(), newbooks.end()) ;
+    std::sort(request.begin(), request.end()) ;
 
     int count = 0 ;
+
 
     for (book i : request) {
+      int size = newbooks.size() ;
         cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        int size = newbooks.size() ;
-
-        count = bsearch (newbooks, 0, size , i.isnb_no()) ;
-
+        if(bsearch (newbooks, 0, size - 1 , i.isnb_no()) == 1)
+            count ++ ;
+        else
+          continue ;
     }
-
     cout << count << endl ;
+
+  return count ;
 }
 
-int bsearch(vector<book> vector, int i, int size, string basicString) {
-    int count = 0 ;
+bool bsearch(vector<book> vector, int i, int size, string basicString) {
 
-    if (size >= 1) {
-        auto mid = 1 + (size - 1) / 2 ;
+    while (size >= 1) {
+        auto mid = i + (size - 1) / 2 ;
         if (vector[mid].isnb_no() == basicString) {
-            count++ ;
-            return count ;
+            return true ;
         }
 
         if (vector[mid].isnb_no() > basicString)
-            return bsearch(vector, 1, mid -1 ,  basicString) ;
+             i = mid + 1 ;
 
-        return bsearch(vector, mid + 1, size, basicString);
+        size = mid -1 ;
     }
-    return 0 ;
+    return false ;
 }
 
 // Generic function to read and vectorize each obj created line by line.

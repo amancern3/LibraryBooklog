@@ -1,3 +1,3 @@
-/home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles/p1_phase.dir
-/home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/cmake-build-debug/CMakeFiles/p1_phase.dir
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/cmake-build-debug/CMakeFiles/edit_cache.dir

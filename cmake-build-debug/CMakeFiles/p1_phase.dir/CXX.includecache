@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h
 iostream
 -
 vector
@@ -22,7 +22,7 @@ fstream
 string.h
 -
 
-/home/aman842/CLionProjects/p1_phase/main.cpp
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/main.cpp
 SearchNewBooks.h
-/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h
 
