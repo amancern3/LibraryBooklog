@@ -24,12 +24,12 @@ int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
     std::sort(request.begin(), request.end()) ;
 
     int count = 0 ;
-
+  int size = newbooks.size() ;
 
     for (book i : request) {
-      int size = newbooks.size() ;
+
         cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        if(bsearch (newbooks, 0, size - 1 , i.isnb_no()) == 1)
+        if(bsearch (newbooks, 0, size - 1 , i.isnb_no()) == true)
             count ++ ;
         else
           continue ;
@@ -41,16 +41,17 @@ int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
 
 bool bsearch(vector<book> vector, int i, int size, string basicString) {
 
-    while (size >= 1) {
-        auto mid = i + (size - 1) / 2 ;
+    while (size - i >= 1) {
+        auto mid = (size - i) / 2 + i;
+
         if (vector[mid].isnb_no() == basicString) {
             return true ;
         }
 
         if (vector[mid].isnb_no() > basicString)
-             i = mid + 1 ;
+             return bsearch(vector, 1, mid - 1, basicString) ;
 
-        size = mid -1 ;
+        return bsearch(vector, mid + 1, size , basicString);
     }
     return false ;
 }
@@ -92,9 +93,10 @@ std::vector<std::string> split(std::string str,std::string sep){
     char* current;
     std::vector<std::string> arr;
     current=strtok(cstr,sep.c_str());
+
     while(current!=NULL){
         arr.push_back(current);
-        current=strtok(NULL,sep.c_str());
+        current=strtok(NULL,",");
     }
     return arr;
 }

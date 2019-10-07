@@ -29,13 +29,14 @@ public:
         language = "" ;
         type = "" ;
     }
+
     bool operator < (const book& obj) const {
-        if (ISNB < obj.ISNB) {
-            return (ISNB < obj.ISNB);
-        } else if (ISNB == obj.ISNB) {
-            return (language.compare(obj.language));
-        } else
-            return type.compare(obj.type);
+      if (ISNB < obj.ISNB) {
+        return (ISNB < obj.ISNB);
+      } else if (ISNB == obj.ISNB) {
+        return (language.compare(obj.language));
+      } else
+        return type.compare(obj.type);
 
     }
 
