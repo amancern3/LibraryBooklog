@@ -6,8 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h
+/home/aman842/CLionProjects/p1_phase/SearchNewBooks.cpp
+SearchNewBooks.h
+/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+
+/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
 iostream
+-
+chrono
 -
 vector
 -
@@ -21,8 +27,4 @@ fstream
 -
 string.h
 -
-
-/cygdrive/d/CLION PROJECTS/LibraryBookLog/main.cpp
-SearchNewBooks.h
-/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h
 

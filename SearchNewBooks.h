@@ -6,6 +6,7 @@
 #define P1_PHASE_SEARCHNEWBOOKS_H
 
 #include <iostream>
+#include <chrono>
 #include <vector>
 #include <sstream>
 #include <stdio.h>
@@ -67,6 +68,23 @@ public:
         ISNB = no;
         language = lang ;
         type = condition ;
+    }
+
+};
+
+class ct {
+
+    std::chrono::high_resolution_clock::time_point start;
+    std::chrono::high_resolution_clock::time_point end ;
+public:
+    void Reset () {
+        start = std::chrono::high_resolution_clock::now() ;
+    }
+
+    double CurrentTime() {
+         end = std::chrono::high_resolution_clock::now() ;
+         double elapsed_us = std::chrono::duration<double , std::micro>(end - start).count() ;
+        return  elapsed_us ;
     }
 
 };

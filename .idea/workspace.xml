@@ -148,12 +148,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< Updated upstream
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="valgrind" />
     </option>
+=======
+    <property name="restartRequiresConfirmation" value="false" />
+>>>>>>> Stashed changes
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,7 +193,12 @@
       <workItem from="1570226142178" duration="4305000" />
       <workItem from="1570237797326" duration="8072000" />
       <workItem from="1570251642774" duration="1405000" />
+<<<<<<< Updated upstream
       <workItem from="1570297796545" duration="21632000" />
+=======
+      <workItem from="1570300966203" duration="359000" />
+      <workItem from="1570395718824" duration="599000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

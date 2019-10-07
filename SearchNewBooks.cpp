@@ -6,6 +6,8 @@
 
 int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
     int count = 0 ;
+    ct clock ;
+    clock.Reset() ;
 
     for (book i : request) {
        // cout << i.isnb_no() << endl ;
@@ -16,6 +18,7 @@ int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
     }
 
     cout << count << endl ;
+    cout << "CPU time: " << clock.CurrentTime() << "ticks"<< endl;
 
   return count ;
 }
@@ -27,6 +30,13 @@ int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
   int size = newbooks.size() ;
 
     for (book i : request) {
+//<<<<<<< Updated upstream
+//=======
+        cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
+        //int size = newbooks.size() ;
+        auto basicstring = i.isnb_no() ;
+         count = bsearch (newbooks, 0, size , basicstring) ;
+//>>>>>>> Stashed changes
 
         cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
         if(bsearch (newbooks, 0, size - 1 , i.isnb_no()) == true)
@@ -109,7 +119,7 @@ int main(int argc, char* argv[]) {
 
     if ( argc < 2 ) {
         std::cerr << "Invalid arguments" << std::endl;
-        std::cerr << "Usage: newbooks.dat request.dat ./SearchNewBooks" << std::endl ;
+        std::cerr << "Usage: .SearchNewBooks <newbooks.dat> <request.dat>" << std::endl ;
         exit (0) ;
     }
 
@@ -134,9 +144,11 @@ while (loop ) {
 
     if ( choice == 'l' || choice == 'L') {
         linear_search(newbooks, request);
+        exit (0) ;
     }
     else if ( choice == 'B' || choice == 'b') {
         binary_search(newbooks,  request);
+        exit (0) ;
     }
     else {
         std::cerr << "Invalid choice, try again ! \n" ;
