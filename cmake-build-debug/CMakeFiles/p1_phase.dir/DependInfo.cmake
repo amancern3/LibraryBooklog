@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aman842/CLionProjects/p1_phase/SearchNewBooks.cpp" "/home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles/p1_phase.dir/SearchNewBooks.cpp.o"
+  "/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.cpp" "/cygdrive/d/CLION PROJECTS/LibraryBookLog/cmake-build-debug/CMakeFiles/p1_phase.dir/SearchNewBooks.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

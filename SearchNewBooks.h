@@ -90,7 +90,7 @@ public:
 };
 std::vector<std::string> split(std::string str,std::string sep) ;
 
-bool bsearch(vector<book> vector, int i, int size, string basicString) ;
+int bsearch(vector<book> vector, int i, int size, string basicString, bool flag) ;
 void vectorize_file (std::string const filename , std::vector<book>& input) ;
 int linear_search(std::vector<book>& newbooks, std::vector<book>& request);
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) ;

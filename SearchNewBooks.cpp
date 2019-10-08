@@ -18,52 +18,58 @@ int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
     }
 
     cout << count << endl ;
-    cout << "CPU time: " << clock.CurrentTime() << "ticks"<< endl;
+    cout << "CPU time: " << clock.CurrentTime() << " ticks"<< endl;
 
   return count ;
 }
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
     std::sort(newbooks.begin(), newbooks.end()) ;
     std::sort(request.begin(), request.end()) ;
-
+    int lastidx = 0;
+    int firstidx = 0;
+    ct clock ;
+    clock.Reset() ;
     int count = 0 ;
   int size = newbooks.size() ;
 
     for (book i : request) {
-//<<<<<<< Updated upstream
-//=======
         cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        //int size = newbooks.size() ;
-        auto basicstring = i.isnb_no() ;
-         count = bsearch (newbooks, 0, size , basicstring) ;
-//>>>>>>> Stashed changes
+        firstidx = bsearch(newbooks, 0, size - 1, i.isnb_no(), true);
+        lastidx = bsearch(newbooks, 0, size - 1, i.isnb_no(), false) ;
+        }
 
-        cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        if(bsearch (newbooks, 0, size - 1 , i.isnb_no()) == true)
-            count ++ ;
-        else
-          continue ;
-    }
-    cout << count << endl ;
-
+    cout << lastidx - firstidx << endl ;
+    cout << "CPU time: " << clock.CurrentTime() << " ticks" << endl;
   return count ;
 }
+int bsearch(vector<book> vector, int i, int size, string basicString, bool flag){
 
-bool bsearch(vector<book> vector, int i, int size, string basicString) {
+auto result = -1 ;
 
     while (size - i >= 1) {
         auto mid = (size - i) / 2 + i;
 
         if (vector[mid].isnb_no() == basicString) {
-            return true ;
+            result = mid ;
+            if(flag) {
+                size = mid - 1;
+                bsearch(vector, 1, size, basicString, true) ;
+
+            }
+            else {
+                i = mid + 1;
+                bsearch(vector, i, size, basicString, true) ;
+
+            }
+
         }
 
-        if (vector[mid].isnb_no() > basicString)
-             return bsearch(vector, 1, mid - 1, basicString) ;
+        else if (vector[mid].isnb_no() > basicString)
+             size = mid - 1 ;
 
-        return bsearch(vector, mid + 1, size , basicString);
+        i = mid + 1 ;
     }
-    return false ;
+    return result ;
 }
 
 // Generic function to read and vectorize each obj created line by line.

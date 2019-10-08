@@ -33,14 +33,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c614189b-8ab5-4255-82fe-a73084f9fb24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program 1 Files/gdb.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/Program 1 Files/gdb.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program 1 Files/p1_phase.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/Program 1 Files/p1_phase.exe.stackdump" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SearchNewBooks.h" beforeDir="false" afterPath="$PROJECT_DIR$/SearchNewBooks.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/p1_phase.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/p1_phase.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="c614189b-8ab5-4255-82fe-a73084f9fb24" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="516">
+              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -194,20 +187,23 @@
       <workItem from="1570237797326" duration="8072000" />
       <workItem from="1570251642774" duration="1405000" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <workItem from="1570297796545" duration="21632000" />
 =======
       <workItem from="1570300966203" duration="359000" />
       <workItem from="1570395718824" duration="599000" />
 >>>>>>> Stashed changes
+=======
+      <workItem from="1570297796545" duration="23311000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21632000" />
+    <option name="totallyTimeSpent" value="23311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="729" y="0" width="1198" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.26869565" />
@@ -222,7 +218,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33150986" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23413567" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23413567" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -409,8 +405,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="516">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
