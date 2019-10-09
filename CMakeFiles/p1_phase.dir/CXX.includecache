@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aman842/CLionProjects/p1_phase/SearchNewBooks.cpp
+SearchNewBooks.h
+/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+
+/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+iostream
+-
+chrono
+-
+vector
+-
+sstream
+-
+stdio.h
+-
+algorithm
+-
+fstream
+-
+string.h
+-
+

@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/p1_phase.dir/SearchNewBooks.cpp.o"
   "p1_phase.pdb"
-  "p1_phase.exe"
-  "libp1_phase.dll.a"
+  "p1_phase"
 )
 
 # Per-language clean rules from dependency scanning.

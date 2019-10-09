@@ -90,8 +90,9 @@ public:
 };
 std::vector<std::string> split(std::string str,std::string sep) ;
 
-int bsearch(vector<book> vector, int i, int size, string basicString, bool flag) ;
+int bsearch(vector<book> vector, int i, int size, book basicString) ;
 void vectorize_file (std::string const filename , std::vector<book>& input) ;
 int linear_search(std::vector<book>& newbooks, std::vector<book>& request);
+void writetofile(int count, std::string file) ;
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) ;
 #endif //P1_PHASE_SEARCHNEWBOOKS_H
