@@ -62,42 +62,42 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/aman842/CLionProjects/p1_phase
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aman842/CLionProjects/p1_phase/cmake-build-debug
+CMAKE_BINARY_DIR = /home/aman842/CLionProjects/p1_phase
 
 #=============================================================================
-# Target rules for target CMakeFiles/p1_phase.dir
+# Target rules for target CMakeFiles/SearchNewBooks.dir
 
 # All Build rule for target.
-CMakeFiles/p1_phase.dir/all:
-	$(MAKE) -f CMakeFiles/p1_phase.dir/build.make CMakeFiles/p1_phase.dir/depend
-	$(MAKE) -f CMakeFiles/p1_phase.dir/build.make CMakeFiles/p1_phase.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target p1_phase"
-.PHONY : CMakeFiles/p1_phase.dir/all
+CMakeFiles/SearchNewBooks.dir/all:
+	$(MAKE) -f CMakeFiles/SearchNewBooks.dir/build.make CMakeFiles/SearchNewBooks.dir/depend
+	$(MAKE) -f CMakeFiles/SearchNewBooks.dir/build.make CMakeFiles/SearchNewBooks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aman842/CLionProjects/p1_phase/CMakeFiles --progress-num=1,2 "Built target SearchNewBooks"
+.PHONY : CMakeFiles/SearchNewBooks.dir/all
 
 # Include target in all.
-all: CMakeFiles/p1_phase.dir/all
+all: CMakeFiles/SearchNewBooks.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/p1_phase.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/p1_phase.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman842/CLionProjects/p1_phase/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/p1_phase.dir/rule
+CMakeFiles/SearchNewBooks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman842/CLionProjects/p1_phase/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SearchNewBooks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aman842/CLionProjects/p1_phase/CMakeFiles 0
+.PHONY : CMakeFiles/SearchNewBooks.dir/rule
 
 # Convenience name for target.
-p1_phase: CMakeFiles/p1_phase.dir/rule
+SearchNewBooks: CMakeFiles/SearchNewBooks.dir/rule
 
-.PHONY : p1_phase
-
-# clean rule for target.
-CMakeFiles/p1_phase.dir/clean:
-	$(MAKE) -f CMakeFiles/p1_phase.dir/build.make CMakeFiles/p1_phase.dir/clean
-.PHONY : CMakeFiles/p1_phase.dir/clean
+.PHONY : SearchNewBooks
 
 # clean rule for target.
-clean: CMakeFiles/p1_phase.dir/clean
+CMakeFiles/SearchNewBooks.dir/clean:
+	$(MAKE) -f CMakeFiles/SearchNewBooks.dir/build.make CMakeFiles/SearchNewBooks.dir/clean
+.PHONY : CMakeFiles/SearchNewBooks.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/SearchNewBooks.dir/clean
 
 .PHONY : clean
 

@@ -4,6 +4,10 @@
 // phase 1 -- reading in the dataSet
 
 
+int countOccurences(vector<book> &vector, int size, book basicString);
+
+// function to write output to resulting file
+
 int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
     int count = 0 ;
     ct clock ;
@@ -12,64 +16,82 @@ int linear_search(std::vector<book>& newbooks, std::vector<book>& request){
     for (book i : request) {
        // cout << i.isnb_no() << endl ;
         for (book x : newbooks) {
-            if (i.isnb_no() == x.isnb_no())
+            if (i.isnb_no() == x.isnb_no() && i.lang() == x.lang() && i.type_def() == x.type_def())
                 count++ ;
         }
     }
 
     cout << count << endl ;
-    cout << "CPU time: " << clock.CurrentTime() << "ticks"<< endl;
+    cout << "CPU time: " << clock.CurrentTime() << " ticks"<< endl;
 
   return count ;
 }
+
+// helper function to setup the actual binary search algo
 int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
     std::sort(newbooks.begin(), newbooks.end()) ;
     std::sort(request.begin(), request.end()) ;
 
+    ct clock ;
+    clock.Reset() ;
     int count = 0 ;
   int size = newbooks.size() ;
 
     for (book i : request) {
-//<<<<<<< Updated upstream
-//=======
-        cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        //int size = newbooks.size() ;
-        auto basicstring = i.isnb_no() ;
-         count = bsearch (newbooks, 0, size , basicstring) ;
-//>>>>>>> Stashed changes
-
-        cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
-        if(bsearch (newbooks, 0, size - 1 , i.isnb_no()) == true)
-            count ++ ;
-        else
-          continue ;
-    }
-    cout << count << endl ;
-
+       // cout << i.isnb_no() << " " << i.lang() << " " << i.type_def() << endl ;
+        count +=countOccurences(newbooks,size, i);
+        }
+cout << count << " Occurences" << endl;
+    cout << "CPU time: " << clock.CurrentTime() << " ticks" << endl;
   return count ;
 }
+// purpose of this function is to check left and right for the same objs and count no of occurences
+// assuming if we find one first.
+int countOccurences(vector<book> &vector, int size, book obj) {
+    auto ind = bsearch(vector, 0, size - 1, obj) ;
 
-bool bsearch(vector<book> vector, int i, int size, string basicString) {
+    if (ind == -1)
+        return 0 ;
+
+    int count = 1;
+    int left = ind - 1;
+    while (left >= 0 && vector[left].isnb_no() == obj.isnb_no()
+                        && vector[left].lang() == obj.lang() && vector[left].type_def() == obj.type_def())
+        count++, left -- ;
+
+    int right = ind + 1 ;
+    while (right <  size && vector[right].isnb_no() == obj.isnb_no()
+    && vector[right].lang() == obj.lang() && vector[right].type_def() == obj.type_def())
+        count++, right ++ ;
+
+    return count;
+}
+// Actual function that performs binary search
+int bsearch(vector<book> vector, int i, int size, book obj){
+
+auto result = -1 ;
 
     while (size - i >= 1) {
         auto mid = (size - i) / 2 + i;
 
-        if (vector[mid].isnb_no() == basicString) {
-            return true ;
-        }
+        if (vector[mid].isnb_no() == obj.isnb_no() && vector[mid].type_def() == obj.type_def() && vector[mid].lang() == obj.lang()) {
+            return mid ;
 
-        if (vector[mid].isnb_no() > basicString)
-             return bsearch(vector, 1, mid - 1, basicString) ;
+            }
 
-        return bsearch(vector, mid + 1, size , basicString);
+
+        else if (vector[mid].isnb_no() > obj.isnb_no())
+             size = mid - 1 ;
+
+        i = mid + 1 ;
     }
-    return false ;
+    return result ;
 }
 
 // Generic function to read and vectorize each obj created line by line.
 
 // https://stackoverflow.com/questions/3910326/c-read-file-line-by-line-then-split-each-line-using-the-delimiter
-
+//home/aman842
 void vectorize_file (std::string const filename , std::vector<book> &input) {
 
     // variables to handle dat files.
@@ -77,7 +99,7 @@ void vectorize_file (std::string const filename , std::vector<book> &input) {
 
 
     if (!fileIn.is_open()) {
-        std::cerr << "File type error, cannot be opened\n" ;
+        std::cerr << "Error: cannot open file " << filename <<endl ;
         exit (0)  ;
     }
 
@@ -97,7 +119,7 @@ void vectorize_file (std::string const filename , std::vector<book> &input) {
 
     fileIn.close();
 }
-
+// function to parse a lines
 std::vector<std::string> split(std::string str,std::string sep){
     char* cstr=const_cast<char*>(str.c_str());
     char* current;
@@ -117,44 +139,52 @@ int main(int argc, char* argv[]) {
     std::vector<book> request ;
     int loop = 1 ;
 
-    if ( argc < 2 ) {
+    if ( argc < 3 ) {
         std::cerr << "Invalid arguments" << std::endl;
-        std::cerr << "Usage: .SearchNewBooks <newbooks.dat> <request.dat>" << std::endl ;
+        std::cerr << "Usage: .SearchNewBooks <newBooks.dat> <request.dat> <result_file.dat>" << std::endl ;
         exit (0) ;
     }
-
-    // ------------
-// reading files goes here
-// ----------
 
     vectorize_file (argv[1], newbooks) ;
     vectorize_file (argv[2], request) ;
 
-    //-----------
-    //Searching algo
-    //------------
-
-
 while (loop ) {
 
     char choice ;
-
+    auto count = 0 ;
     std::cout << "Choice of search method ([l]inear, [b]inary)?" << std::endl;
     std::cin >> (choice );
 
     if ( choice == 'l' || choice == 'L') {
-        linear_search(newbooks, request);
+       count = linear_search(newbooks, request);
+       writetofile(count, argv[3]) ;
         exit (0) ;
     }
     else if ( choice == 'B' || choice == 'b') {
-        binary_search(newbooks,  request);
+       count = binary_search(newbooks,  request);
+       writetofile(count, argv[3]) ;
         exit (0) ;
     }
     else {
-        std::cerr << "Invalid choice, try again ! \n" ;
+        std::cerr << "Invalid choice \n" ;
     }
 
 } }
+
+void writetofile(int count, std::string file) {
+
+    std::ofstream fileOut(file) ;
+
+    if (!fileOut.is_open())
+        std::cerr << "Error: cannot open file " << file << endl ;
+
+    fileOut << count ;
+    fileOut.close() ;
+
+}
+
+
+
 
 
 

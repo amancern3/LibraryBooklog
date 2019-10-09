@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/aman842/CLionProjects/p1_phase")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/aman842/CLionProjects/p1_phase/cmake-build-debug")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/aman842/CLionProjects/p1_phase")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

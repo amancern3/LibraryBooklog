@@ -7,16 +7,14 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "../CMakeLists.txt"
   "CMakeFiles/3.14.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.5/CMakeSystem.cmake"
+  "CMakeLists.txt"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCInformation.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCXXInformation.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeCommonLanguageInclude.cmake"
-  "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
-  "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeFindCodeBlocks.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeGenericSystem.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeInitializeConfigs.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/CMakeLanguageInformation.cmake"
@@ -32,7 +30,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/Platform/Linux-GNU.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/Platform/Linux.cmake"
   "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/Platform/UnixPaths.cmake"
-  "/snap/clion/83/bin/cmake/linux/share/cmake-3.14/Modules/ProcessorCount.cmake"
   )
 
 # The corresponding makefile is:
@@ -48,5 +45,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/p1_phase.dir/DependInfo.cmake"
+  "CMakeFiles/SearchNewBooks.dir/DependInfo.cmake"
   )
