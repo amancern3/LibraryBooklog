@@ -18,7 +18,7 @@ using namespace std ;
 
 class book {
 private:
-    std::string ISNB;
+    int ISNB;
     std::string language ;
     std::string type ;
 
@@ -26,7 +26,7 @@ private:
     // constructor, use 'new' each time a eol is reached.
 public:
     book () {
-        ISNB = "" ;
+        ISNB = 0 ;
         language = "" ;
         type = "" ;
     }
@@ -42,7 +42,7 @@ public:
     }
 
 
-    std::string isnb_no () {
+    int isnb_no () {
         return  ISNB ;
     }
 
@@ -54,7 +54,7 @@ public:
         return type ;
     }
 
-    book (std::string& no, std::string& lang, std::string &condition) {
+    book (int no, std::string& lang, std::string &condition) {
         ISNB = no;
         language = lang ;
         type = condition ;
@@ -64,7 +64,7 @@ public:
 
     }
 
-    void  new_obj (std::string& no, std::string& lang, std::string &condition) {
+    void  new_obj (int& no, std::string& lang, std::string &condition) {
         ISNB = no;
         language = lang ;
         type = condition ;

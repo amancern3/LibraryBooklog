@@ -111,8 +111,8 @@ void vectorize_file (std::string const filename , std::vector<book> &input) {
 
         std::vector<std::string> result_v ;
         result_v = split(line, ",") ;
-
-        book* newObj = new book (result_v[0], result_v[1], result_v[2]) ;
+        auto  x = stoi(result_v[0]);
+        book* newObj = new book (x, result_v[1], result_v[2]) ;
         input.push_back(*newObj) ;
 
     }
