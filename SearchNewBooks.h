@@ -27,7 +27,7 @@ class book {
         ISNB = 0;
         language = "";
         type = ""; }
-  bool operator < (const book& obj) const {
+  bool operator < (const book& obj) {
     if (ISNB != obj.ISNB) {
       return (ISNB < obj.ISNB);
     } else if (ISNB == obj.ISNB && obj.language != language) {
@@ -36,13 +36,13 @@ class book {
       return (type.compare(obj.type) < 0 ? 0 : 1); }
     // Check if string of this.type ==
   }
-    int isnb_no() {
+      int isnb_no() const {
         return  ISNB ; }
 
-    std::string lang() {
+      std::string lang() const {
         return language; }
 
-    std::string type_def() {
+      std::string type_def() const {
         return type; }
 
     book(int no, std::string& lang, std::string &condition) {
@@ -73,7 +73,8 @@ class ct {
 std::vector<std::string> split(std::string str, std::string sep);
 int bsearch(vector<book> vector, int i, int size, book basicString);
 void vectorize_file(std::string const filename, std::vector<book>& input);
-int linear_search(std::vector<book>& newbooks, std::vector<book>& request);
+int linear_search(const std::vector<book> newbooks, std::vector<book>& request);
 void writetofile(int count, std::string file);
-int binary_search(std::vector<book>& newbooks, std::vector<book>& request);
+int countOccurences(vector<book> &vector, int size, book basicString);
+int binary_search(std::vector<book> &newbooks, std::vector<book>& request);
 #endif  // P1_PHASE_SEARCHNEWBOOKS_H

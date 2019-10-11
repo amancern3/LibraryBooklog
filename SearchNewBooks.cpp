@@ -3,11 +3,12 @@
 // phase 1 -- reading in the dataSet
 
 
-int countOccurences(vector<book> &vector, int size, book basicString);
+
 
 // function to write output to resulting file
 
-int linear_search(std::vector<book>& newbooks, std::vector<book>& request) {
+int linear_search(const std::vector<book> newbooks,
+    std::vector<book>& request) {
     int count = 0;
     ct clock;
     clock.Reset();
@@ -27,7 +28,7 @@ int linear_search(std::vector<book>& newbooks, std::vector<book>& request) {
 }
 
 // helper function to setup the actual binary search algo
-int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
+int binary_search(std::vector<book> &newbooks, std::vector<book>& request) {
     std::sort(newbooks.begin(), newbooks.end());
     // std::sort(request.begin(), request.end()) ;
 
@@ -35,9 +36,9 @@ int binary_search(std::vector<book>& newbooks, std::vector<book>& request) {
     clock.Reset();
     int count = 0;
   int size = newbooks.size();
-
+    auto pointer = newbooks;
     for (book i : request) {
-        count +=countOccurences(newbooks, size, i);
+        count +=countOccurences(pointer, size, i);
         }
 cout << count << endl;
     cout << "CPU time: " << clock.CurrentTime() << " ticks" << endl;
@@ -46,7 +47,7 @@ cout << count << endl;
 // purpose of this function is to check left and
 // right for the same objs and count no of occurences
 // assuming if we find one first.
-int countOccurences(vector<book>  &vector, int size, book obj) {
+int countOccurences(vector<book> &vector, int size, book obj) {
     auto ind = bsearch(vector, 0, size - 1, obj);
     if (ind == -1)
         return 0;
