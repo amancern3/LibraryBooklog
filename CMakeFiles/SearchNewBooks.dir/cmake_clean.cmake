@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SearchNewBooks.dir/SearchNewBooks.cpp.o"
   "SearchNewBooks.pdb"
-  "SearchNewBooks"
+  "SearchNewBooks.exe"
+  "libSearchNewBooks.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

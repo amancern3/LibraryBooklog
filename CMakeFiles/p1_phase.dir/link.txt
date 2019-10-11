@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Wextra -g   CMakeFiles/p1_phase.dir/SearchNewBooks.cpp.o  -o p1_phase 

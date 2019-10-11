@@ -1,1 +1,1 @@
-/usr/bin/c++   -Wall -Wextra -g   CMakeFiles/SearchNewBooks.dir/SearchNewBooks.cpp.o  -o SearchNewBooks 
+/usr/bin/c++.exe  -Wall -Wextra -g  -Wl,--enable-auto-import CMakeFiles/SearchNewBooks.dir/SearchNewBooks.cpp.o  -o SearchNewBooks.exe -Wl,--out-implib,libSearchNewBooks.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

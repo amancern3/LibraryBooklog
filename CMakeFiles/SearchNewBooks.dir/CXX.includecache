@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/aman842/CLionProjects/p1_phase/SearchNewBooks.cpp
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.cpp
 SearchNewBooks.h
-/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h
 
-/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h
+/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h
 iostream
 -
 chrono

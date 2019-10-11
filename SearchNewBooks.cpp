@@ -71,7 +71,7 @@ int bsearch(vector<book> vector, int i, int size, book obj){
 
 auto result = -1 ;
 
-    while (size - i >= 1) {
+    while (size - i >= 0) {
         auto mid = (size - i) / 2 + i;
 
         if (vector[mid].isnb_no() == obj.isnb_no() && vector[mid].type_def() == obj.type_def() && vector[mid].lang() == obj.lang()) {
@@ -83,7 +83,8 @@ auto result = -1 ;
         else if (vector[mid].isnb_no() > obj.isnb_no())
              size = mid - 1 ;
 
-        i = mid + 1 ;
+        else
+            i = mid + 1 ;
     }
     return result ;
 }

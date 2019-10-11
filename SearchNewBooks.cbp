@@ -8,71 +8,85 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/aman842/CLionProjects/p1_phase"/>
+				<Option working_dir="/cygdrive/d/CLION PROJECTS/LibraryBookLog"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/aman842/CLionProjects/p1_phase"/>
+				<Option working_dir="/cygdrive/d/CLION PROJECTS/LibraryBookLog"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SearchNewBooks">
-				<Option output="/home/aman842/CLionProjects/p1_phase/SearchNewBooks" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/aman842/CLionProjects/p1_phase"/>
+				<Option output="/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/CLION PROJECTS/LibraryBookLog"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
-				<Compiler/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 SearchNewBooks"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 SearchNewBooks"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SearchNewBooks/fast">
-				<Option output="/home/aman842/CLionProjects/p1_phase/SearchNewBooks" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/aman842/CLionProjects/p1_phase"/>
+				<Option output="/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/d/CLION PROJECTS/LibraryBookLog"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
-				<Compiler/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 SearchNewBooks/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 SearchNewBooks/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/aman842/CLionProjects/p1_phase"/>
+				<Option working_dir="/cygdrive/d/CLION PROJECTS/LibraryBookLog"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/aman842/CLionProjects/p1_phase/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/d/CLION\ PROJECTS/LibraryBookLog/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/aman842/CLionProjects/p1_phase/SearchNewBooks.cpp">
+		<Unit filename="/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.cpp">
 			<Option target="SearchNewBooks"/>
 		</Unit>
-		<Unit filename="/home/aman842/CLionProjects/p1_phase/SearchNewBooks.h">
+		<Unit filename="/cygdrive/d/CLION PROJECTS/LibraryBookLog/SearchNewBooks.h">
 			<Option target="SearchNewBooks"/>
 		</Unit>
-		<Unit filename="/home/aman842/CLionProjects/p1_phase/CMakeLists.txt">
+		<Unit filename="/cygdrive/d/CLION PROJECTS/LibraryBookLog/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
